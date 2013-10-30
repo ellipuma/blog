@@ -23,11 +23,10 @@
           <i class="icon-user"></i> by <a href="#"><?=$post['username']?></a>
           | <i class="icon-calendar"></i> <?=$post['post_created']?>
 | <i class="icon-comment"></i> <a href="#">3 Comments</a>
-          | <i class="icon-share"></i> <a href="#">39 Shares</a>
-          | <i class="icon-tags"></i> Tags : <a href="#"><span class="label label-info">Snipp</span></a>
-          <a href="#"><span class="label label-info">Bootstrap</span></a>
-          <a href="#"><span class="label label-info">UI</span></a>
-          <a href="#"><span class="label label-info">growth</span></a>
+          | <i class="icon-tags"></i> Tags :
+			<?foreach ($tags as $tag):?>
+				<a href="<?=BASE_URL?>tags/view/<?=$tag['tag_id']?>"><span class="label label-info" style="background-color:#5bc0de"><?=$tag['tag_name']?></span></a>
+			<?endforeach?>
         </p>
       </div>
     </div>
